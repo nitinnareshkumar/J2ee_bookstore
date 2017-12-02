@@ -8,11 +8,13 @@ import java.util.Map.Entry;
 
 import com.bookStore.Service.BookService;
 import com.bookStore.model.Book;
+import org.apache.log4j.Logger;
 
 public class DefaultBookServiceImpl implements BookService {
 
 private static Map<Integer, Book> books;
 private static DefaultBookServiceImpl defaultbookservice;
+private static Logger logger = Logger.getLogger(DefaultBookServiceImpl.class);
 static{
 	defaultbookservice = new DefaultBookServiceImpl();
 	books = new HashMap<Integer ,Book>();
@@ -24,6 +26,10 @@ static{
 	public List<Book> getBooks() {
 		// TODO Auto-generated method stub
 		List<Book> listofBooks = new ArrayList<Book>();
+		logger.warn("This is warn : " );
+		logger.error("This is error : " );
+		logger.fatal("This is fatal : " );
+		logger.debug("This is debug : " );
 		for (Entry<Integer, Book> e : books.entrySet()){
 			listofBooks.add(e.getValue());
 		}

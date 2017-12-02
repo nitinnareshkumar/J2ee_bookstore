@@ -22,6 +22,10 @@ public class BookServlet extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 System.out.println("path is" + req.getServletPath());
+String myStrings = (String) getServletContext().getAttribute("MyString");
+
+	System.out.println("string is"  + myStrings);
+
 String path = req.getServletPath();
 	switch (path){
 	case "/index":
