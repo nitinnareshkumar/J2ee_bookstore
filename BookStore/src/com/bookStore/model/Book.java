@@ -5,7 +5,7 @@ public class Book {
 	private String author;
 	private int id;
 	private float price;
-	//adding comment on the constructor
+	//adding comment on the constructor stuffed
 	public Book(String title, String author, int id, float price) {
 		super();
 		this.title = title;
