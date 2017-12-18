@@ -1,5 +1,5 @@
 package com.bookStore.model;
-
+//this is the model class
 public class Book {
 	private String title;
 	private String author;
